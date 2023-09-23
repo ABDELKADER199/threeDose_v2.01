@@ -5,13 +5,15 @@ let li = document.querySelectorAll('.burger_list li');
 
 // i create to top button
 
-window.onscroll = ()=>{
-    if(this.scrollY >= 400 ){
-        scroll_btn.style.display = "block";
-    }else{
-        scroll_btn.style.display = "none";
+onscroll = ()=>{
+        if(this.scrollY >= 400 ){
+            scroll_btn.style.display = "block";
+        }else{
+            scroll_btn.style.display = "none";
+        }
     }
-}
+    
+
 
 
 scroll_btn.addEventListener('click', ()=>{
@@ -27,23 +29,26 @@ scroll_btn.addEventListener('click', ()=>{
 
 nav_bar.addEventListener('click', ()=>{
     burger_list.classList.toggle('show');
+    background()
 })
 
-
-window.onscroll = ()=>{
-    if(this.scrollY <= 500){
-        li[0].style.background = "#8000ff";
-        li[1].style.background = "#1a1a1a";
-        li[2].style.background = "#1a1a1a";
-
-    }else if(window.scrollY <= 1000){
-        li[1].style.background = "#8000ff";
-        li[0].style.background = "#1a1a1a";
-        li[2].style.background = "#1a1a1a";
-
-    }else {
-        li[2].style.background = "#8000ff";
-        li[0].style.background = "#1a1a1a";
-        li[1].style.background = "#1a1a1a";
+function background(){
+    onscroll = ()=>{
+        if(this.scrollY <= 500){
+            li[0].style.background = "#8000ff";
+            li[1].style.background = "#1a1a1a";
+            li[2].style.background = "#1a1a1a";
+    
+        }else if(window.scrollY <= 1000){
+            li[1].style.background = "#8000ff";
+            li[0].style.background = "#1a1a1a";
+            li[2].style.background = "#1a1a1a";
+    
+        }else {
+            li[2].style.background = "#8000ff";
+            li[0].style.background = "#1a1a1a";
+            li[1].style.background = "#1a1a1a";
+        }
     }
+    
 }
