@@ -5,7 +5,7 @@ let li = document.querySelectorAll('.burger_list li');
 
 // i create to top button
 
-onscroll = ()=>{
+document.onscroll = ()=>{
         if(this.scrollY >= 400 ){
             scroll_btn.style.display = "block";
         }else{
